@@ -1,0 +1,20 @@
+@import '../../styles/common.scss';
+
+.footerCopy {
+  font-size: 14px;
+  color: #aaa;
+  padding-top: 20px;
+  background-color: #fff;
+  border-top: 1px solid #eee;
+  @include displayFlex(column, center, center);
+
+  .c-top {
+    span {
+      margin-right: 10px;
+    }
+  }
+
+  .c-center {
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,36 @@
+@import '../../styles/common.scss';
+
+.footer-box {
+    margin-top: 200px;
+    background-color: #fff;
+    @include displayFlex(row, center, center);
+
+    .footer-container {
+        width: 80%;
+        height: 200px;
+        @include displayFlex(row, space-between, center);
+
+        .footer-left {
+            flex: 1;
+        }
+
+        .footer-right {
+            flex: 5;
+            @include displayFlex(row, space-around, center);
+
+            .aa {
+                font-size: 14px;
+                padding-bottom: 7px;
+                color: #999;
+                cursor: pointer;
+
+                &:nth-child(1) {
+                    font-size: 18px;
+                    padding-bottom: 20px;
+                    color: #000;
+                    cursor: unset;
+                }
+            }
+        }
+    }
+}
