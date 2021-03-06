@@ -18,9 +18,9 @@ const Footer = () => {
         </div>
         <div className="footer-right">
           {footerArray.map((item, index) => {
-            return <div className="footer-content">
+            return <div className="footer-content" key={index}>
               {item.map((it, idx) => {
-                return <div className="aa">{it}</div>
+                return <div className="aa" key={idx}>{it}</div>
               })}
             </div>
 

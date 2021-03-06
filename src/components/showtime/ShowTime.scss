@@ -1,0 +1,22 @@
+@import '../../styles/common.scss';
+
+.showBox {
+  margin-top: 15px;
+
+  .container {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    height: 200px;
+  }
+  .show-left {
+    flex: 2;
+    border: 1px solid #aaa;
+    margin-right: 15px;
+  }
+
+  .show-right {
+    flex: 1;
+    border: 1px solid #aaa;
+  }
+}

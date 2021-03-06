@@ -1,4 +1,5 @@
 import React from 'react';
+import Login from './../login/Login';
 import './Header.scss';
 
 const Header = () => {
@@ -15,7 +16,7 @@ const Header = () => {
                     })}
                 </div>
                 <div className="right">
-                    <a href="#">登录</a>
+                    <Login />
                     <span>|</span>
                     <a href="#">注册</a>
                 </div>

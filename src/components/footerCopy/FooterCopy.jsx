@@ -13,8 +13,8 @@ const FooterCopy = () => {
   return (
     <div className="footerCopy">
       <div className="c-top">
-        {copyICP.map((item) => {
-          return <span>{item}</span>
+        {copyICP.map((item, index) => {
+          return <span key={index}>{item}</span>
         })}
       </div>
       <div className="c-center">
