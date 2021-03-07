@@ -9,7 +9,7 @@ import './Lunbo.scss';
 export default function Lunbo() {
   return (
     <div>
-      <Carousel autoplay className="lunboBox">
+      <Carousel autoplay autoplaySpeed={4000} speed={1500} className="lunboBox">
         <div>
           <img src={aa} alt="a"/>
         </div>
@@ -21,6 +21,15 @@ export default function Lunbo() {
         </div>
         <div>
           <img src={dd} alt="a"/>
+        </div>
+        <div>
+          <img src={aa} alt="a"/>
+        </div>
+        <div>
+          <img src={bb} alt="a"/>
+        </div>
+        <div>
+          <img src={cc} alt="a"/>
         </div>
       </Carousel>
     </div>

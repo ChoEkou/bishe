@@ -1,0 +1,26 @@
+@import '../../styles/common.scss';
+
+.fenleiBox {
+  margin-top: 100px;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+
+  .carBox {
+    img {
+      width: 250px;
+      height: 100px;
+    }
+
+
+    .ant-carousel .slick-list .slick-slide.slick-active {
+      width: 270px !important;
+    }
+
+    .ant-carousel .slick-initialized .slick-slide {
+      width: 270px !important;
+    }
+  }
+}
