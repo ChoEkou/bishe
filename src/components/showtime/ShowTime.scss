@@ -4,19 +4,41 @@
   margin-top: 15px;
 
   .container {
-    display: flex;
     width: 80%;
     margin: 0 auto;
-    height: 300px;
+
+    h1 {
+      border-bottom: 1px dashed #aaa;
+    }
   }
+
+  .main {
+    display: flex;
+  }
+
   .show-left {
-    flex: 2;
-    border: 1px solid #aaa;
-    margin-right: 15px;
+    flex: 1;
+    margin-right: 40px;
+
+    .leftText {
+      color: #555;
+      border-bottom: 1px solid #bbb;
+      padding: 10px 0;
+      font-weight: 600;
+
+      span:hover {
+        cursor: pointer;
+        color: red;
+      }
+    }
+    
+    .red {
+      border-bottom: 1px solid red;
+      color: red;
+    }
   }
 
   .show-right {
-    flex: 1;
-    border: 1px solid #aaa;
+    flex: 3;
   }
 }

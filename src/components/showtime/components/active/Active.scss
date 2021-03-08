@@ -1,0 +1,38 @@
+@import '../../../../styles/common.scss';
+
+.acTitle {
+  text-align: center;
+  color: #1d4e92;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.acInfo {
+  text-align: center;
+  font-size: 12px;
+  color: #909090;
+  margin-top: 15px;
+}
+
+.acMain {
+  .mainTitle {
+    font-size: 20px;
+    text-align: center;
+    color: #000;
+    margin-top: 30px;
+  }
+
+  .mainContent {
+    color: #000;
+    font-family: '宋体';
+    margin-top: 15px;
+    text-indent: 2em;
+  }
+
+  .mainFoot {
+    text-align: right;
+    color: #000;
+    font-family: '宋体';
+    margin-top: 10px;
+  }
+}

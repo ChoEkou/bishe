@@ -1,0 +1,45 @@
+@import '../../../../styles/common.scss';
+
+.newTitle {
+  font-size: 24px;
+  text-align: center;
+  color: #3499c7;
+}
+
+.dateTag {
+  font-size: 12px;
+  margin-top: 15px;
+  @include displayFlex(row, center, center);
+
+  .tag {
+    width: 80px;
+    height: 20px;
+    text-align: center;
+    background-color: #cccccc;
+    color: #ffffff;
+    margin-right: 40px;
+    border-radius: 2px;
+  }
+
+  .count {
+    span {
+      color: #009ed2;
+    }
+  }
+}
+
+.newPs {
+  font-size: 14pt;
+  font-family: 宋体;
+  margin-top: 20px;
+
+  span {
+    text-indent: 2em;
+    display: inline-block;
+  }
+}
+
+.newImgs {
+  margin-top: 30px;
+  text-align: center;
+}
