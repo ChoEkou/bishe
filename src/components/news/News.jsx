@@ -1,10 +1,11 @@
 import React from 'react';
-import aa from '../../../showtime/imgs/1.jpg';
-import bb from '../../../showtime/imgs/2.jpg';
-import cc from '../../../showtime/imgs/3.jpg';
-import dd from '../../../showtime/imgs/4.jpg';
-import ee from '../../../showtime/imgs/5.jpg';
-import ff from '../../../showtime/imgs/6.jpg';
+import Header from '../header/Header';
+import aa from '../../assets/news/1.jpg';
+import bb from '../../assets/news/2.jpg';
+import cc from '../../assets/news/3.jpg';
+import dd from '../../assets/news/4.jpg';
+import ee from '../../assets/news/5.jpg';
+import ff from '../../assets/news/6.jpg';
 import './News.scss';
 
 const newTitle = "魅力社团 激扬青春 多姿校园 展我风采——学校社团展示活动掠影";
@@ -48,6 +49,7 @@ const newImgs = [
 export default function News() {
   return (
     <div>
+      <Header/>
       <div className="newTitle">{newTitle}</div>
       <div className="dateTag">
         <div className="tag">2017-10-20</div>

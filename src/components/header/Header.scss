@@ -14,21 +14,14 @@
 
     .center {
       .navItem {
-        margin: 0 15px;
+        margin: 0 50px;
         transition: all .5s;
 
         &:hover {
           color: #3EB4FA;
           border-bottom: 5px solid #3EB4FA;
+          cursor: pointer;
         }
-      }
-    }
-
-    .right {
-      @include displayFlex(row, space-between, center);
-
-      span {
-        margin: 0 10px;
       }
     }
   }

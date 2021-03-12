@@ -1,8 +1,6 @@
 import React from 'react';
-import Header from '../src/components/header/Header';
-import Banner from '../src/components/bannerLun/Banner';
-import FenLei from '../src/components/fenlei/FenLei';
-import ShowTime from '../src/components/showtime/ShowTime';
+import {HashRouter ,Route} from 'react-router-dom';
+import routes from './route.js';
 import Footer from '../src/components/footer/Footer';
 import FooterCopy from '../src/components/footerCopy/FooterCopy';
 import './App.scss';
@@ -10,10 +8,9 @@ import './App.scss';
 const App = () => {
   return (
     <div className="app-wrap">
-      <Header/>
-      <Banner/>
-      <FenLei/>
-      <ShowTime/>
+      <HashRouter>
+        {routes.map((route)=><Route key={route.path} {...route}/>)}
+      </HashRouter>
       <Footer/>
       <FooterCopy/>
     </div>

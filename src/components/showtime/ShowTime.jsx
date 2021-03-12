@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import classNames from 'classnames';
-import News from './components/news/News';
-import Talks from './components/talks/Talks';
-import Active from './components/active/Active';
-import FengCai from './components/fengcai/FengCai';
+// import News from '../news/News';
+// import Talks from './components/talks/Talks';
+// import Active from '../active/Active';
+// import FengCai from './components/fengcai/FengCai';
 import './ShowTime.scss';
 
 export default function ShowTime() {
@@ -30,12 +30,12 @@ export default function ShowTime() {
               </div>)
             })}
           </div>
-          <div className="show-right">
+          {/* <div className="show-right">
             {current == 0 && <News />}
             {current == 1 && <Talks />}
             {current == 2 && <Active />}
             {current == 3 && <FengCai />}
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

@@ -1,24 +1,38 @@
 import React from 'react';
-import Login from './../login/Login';
+import { useHistory, Link } from 'react-router-dom';
 import './Header.scss';
 
 const Header = () => {
-    const nav = ['首页', '|', '校园招聘', '|', '社会招聘', '|', '实习生招聘', '|', '个人中心'];
+    const nav = ['社团', '活动',  '新闻', '制度', '登录', '新生注册'];
+    const history = useHistory();
+    
+    const handleLink = (index) => {
+        if(index === 0) {
+            history.push('/community');
+        }else if(index === 1){
+            history.push('/active');
+        }else if(index === 2){
+            history.push('/news');
+        }else if(index === 3){
+            history.push('/rules');
+        }else if(index === 4){
+            history.push('/login');
+        }else {
+            history.push('/register');
+        }
+            
+    };
+
     return (
         <div className='headerBox'>
             <div className="container">
                 <div className="left">
-                    社团招聘网站
+                    <Link to='/'>我的社团</Link>
                 </div>
                 <div className="center">
                     {nav.map((nav, index) => {
-                        return <a href="#" className='navItem' key={index}>{nav}</a>
+                        return <span onClick={()=>handleLink(index)} className='navItem' key={index}>{nav}</span>
                     })}
-                </div>
-                <div className="right">
-                    <Login />
-                    <span>|</span>
-                    <a href="#">注册</a>
                 </div>
             </div>
         </div>

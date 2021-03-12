@@ -4,9 +4,10 @@ import { Modal, Form, Input, Button } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 import loginBg from '../../assets/login/1.jpg';
 import './Login.scss';
+import Header from '../header/Header';
 
 const Login = () => {
-  const [isShow, setIsShow] = useState(false);
+  const [isShow, setIsShow] = useState(true);
 
   const handleModalShow = () => {
     setIsShow(true);
@@ -23,6 +24,7 @@ const Login = () => {
   return (
     <div>
       <div>
+        <Header/>
         <span className="loginBtn" onClick={handleModalShow}>登录</span>
         <Modal
           visible={isShow}
