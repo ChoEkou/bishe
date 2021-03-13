@@ -1,0 +1,34 @@
+@import '../../styles/common.scss';
+
+.rgtBox {
+  height: 100vh;
+  background: url('../../assets/register/bg.jpg') no-repeat;
+  background-size: cover;
+
+  h1 {
+    text-align: center;
+    color: #434447;
+    padding-top: 50px;
+    font-size: 30px;
+  }
+}
+
+.rgtForm {
+  width: 50%;
+  margin: 70px auto;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px #aaa;
+  padding: 70px 150px 10px;
+}
+
+.rgtBtn {
+  width: 100px;
+  height: 40px;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: rgb(148, 203, 243);
+  border: none;
+  margin-left: 40%;
+  margin-top: 20px;
+}

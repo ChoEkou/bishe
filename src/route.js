@@ -6,6 +6,9 @@ import News from '../src/components/news/News';
 import Rules from '../src/components/rules/Rules';
 import Login from '../src/components/login/Login';
 import Register from '../src/components/register/Register';
+import User from '../src/components/user/User';
+import Admin from './components/admin/Admin';
+import Apply from './components/user/components/apply/Apply';
 
 const routes = [
   {
@@ -42,6 +45,22 @@ const routes = [
     path: '/register',
     exact: true,
     component: Register
+  },
+  {
+    path: '/user',
+    exact: true,
+    component: User,
+    routes: [
+      {
+        path: '/user/apply',
+        component: Apply
+      }
+    ]
+  },
+  {
+    path: '/admin',
+    exact: true,
+    component: Admin
   },
 ];
 

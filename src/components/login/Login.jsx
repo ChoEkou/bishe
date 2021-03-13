@@ -1,72 +1,57 @@
-
-import React, { useState } from 'react';
-import { Modal, Form, Input, Button } from 'antd';
-import { UserOutlined, LockOutlined } from '@ant-design/icons';
-import loginBg from '../../assets/login/1.jpg';
+import React from 'react';
+import {Link, useHistory} from 'react-router-dom';
+import { Button, Form, Input, message } from 'antd';
+import loginImg from '../../assets/login/login.jpg';
+import loginUser from '../../assets/login/user.jpg';
 import './Login.scss';
-import Header from '../header/Header';
+
+const userData = [
+  {
+    username: 'user1',
+    password: 'user1'
+  },
+  {
+    username: 'user2',
+    password: 'user2'
+  }
+];
 
 const Login = () => {
-  const [isShow, setIsShow] = useState(true);
-
-  const handleModalShow = () => {
-    setIsShow(true);
-  };
-
-  const handleOk = () => {
-    setIsShow(false);
-  };
-
-  const handleCancel = () => {
-    setIsShow(false);
+  const history = useHistory();
+  const onFinish = (values) => {
+    if((values.username == '2017001' && values.password == '2017001' ) || (values.username == '2017002' && values.password == '2017002' ) ) {
+      history.push('/user');
+    }else if((values.username == 'admin1' && values.password == 'admin1' ) || (values.username == 'admin2' && values.password == 'admin2' )) {
+      history.push('/admin');
+    }else{
+      message.info("用户不存在！")
+    }
   };
 
   return (
     <div>
-      <div>
-        <Header/>
-        <span className="loginBtn" onClick={handleModalShow}>登录</span>
-        <Modal
-          visible={isShow}
-          onCancel={handleCancel}
-          footer={null}
-          destroyOnClose
-          className="modalBox"
-        >
-          <div className="loginBg">
-            <img src={loginBg} alt="loginbg" />
+      <div className="loginBox">
+        <Link to="/" className="toApp">返回首页 -></Link>
+        <div className="loginContent">
+          <div className="loginLeft">
+            <img src={loginImg} alt="loginImg"/>
           </div>
-          <div className="loginBox">
-            <h3 className="modalTitle">欢迎登录</h3>
-            <Form
-              colon={false}
-              layout="vertical"
-              requiredMark={false}
-            >
-              <Form.Item label="用户名"
-                name="userName"
-                rules={[
-                  { required: true, message: '请输入您的用户名!' }]}
-              >
-                <Input
-                  prefix={<UserOutlined/>}
-                  placeholder="请输入用户名"
-                />
+          <div className="loginRight">
+            <img src={loginUser} alt="loginUser" className="loginUser"/>
+            <h2>高校社团学生登录</h2>
+            <Form onFinish={onFinish} className="loginForm">
+              <Form.Item name="username" rules={[{required: true, message: "请输入您的用户名！"}]}>
+                <Input/>
               </Form.Item>
-              <Form.Item label="密码" name="password" rules={[
-                {
-                  required: true,
-                  message: '请输入您的密码!'
-                }
-              ]}>
-                <Input.Password prefix={<LockOutlined />} placeholder="请输入密码" />
+              <Form.Item name="password" rules={[{required: true, message: "请输入您的密码！"}]}>
+                <Input.Password/>
               </Form.Item>
               <Form.Item>
-                <Button type="primary" htmlType="submit" className="submitBtn" block>登录</Button>
+                <Button htmlType="submit" type="primary" className="loginBtn">登录</Button>
               </Form.Item>
             </Form>
           </div>
-        </Modal>
+        </div>
       </div>
     </div>
   )

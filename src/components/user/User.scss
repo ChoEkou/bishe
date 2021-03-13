@@ -1,0 +1,19 @@
+@import '../../styles/common.scss';
+
+.userBox {
+  h3 {
+    color: white;
+  }
+  .ant-layout-header {
+    padding-left: 10px;
+    font-size: 16px;
+  }
+}
+
+.header {
+  @include displayFlex(row, space-between, center);
+}
+
+.headerRight {
+  color: #fff;
+}
