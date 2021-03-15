@@ -8,7 +8,8 @@ import Login from '../src/components/login/Login';
 import Register from '../src/components/register/Register';
 import User from '../src/components/user/User';
 import Admin from './components/admin/Admin';
-import Apply from './components/user/components/apply/Apply';
+import Apply from '../src/components/user/components/apply/Apply';
+import Talk from '../src/components/user/components/talk/Talk';
 
 const routes = [
   {
@@ -48,11 +49,16 @@ const routes = [
   },
   {
     path: '/user',
-    exact: true,
     component: User,
     routes: [
       {
-        path: '/user/apply',
+        path: '/talk',
+        exact: true,
+        component: Talk
+      },
+      {
+        path: '/apply',
+        exact: true,
         component: Apply
       }
     ]
@@ -62,6 +68,7 @@ const routes = [
     exact: true,
     component: Admin
   },
+  
 ];
 
 export default routes;

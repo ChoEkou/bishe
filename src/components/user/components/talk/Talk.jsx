@@ -1,9 +1,27 @@
-import React from 'react';
 
-export default function Talk() {
+import React from 'react';
+import { Divider } from 'antd';
+import {userdata} from '../../../../data.js';
+import './Talk.scss';
+
+const Talk = () => {
   return (
-    <div>
-      talk
+    <div className="talkBox">
+      <div className="talkTitle">
+        欢迎同学: &nbsp;&nbsp;<span>小{userdata[userdata.length-1].rgtname}</span>
+      </div>
+      <Divider orientation="left">公告</Divider>
+      <div className="talkMain">
+        <div className="mainTitle">
+          发布时间：2021-5-2 11:34:27
+        </div>
+        <div className="mainContent">
+          <h4>通知</h4>
+          <div>明天下午</div>
+        </div>
+      </div>
     </div>
   )
 }
+
+export default Talk;

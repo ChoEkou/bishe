@@ -8,7 +8,9 @@ const App = () => {
     <div className="app-wrap">
       <HashRouter>
         <Switch>
-          {routes.map((route)=><Route key={route.path} {...route}/>)}
+          {routes.map((route)=><Route key={route.path} exact={route.exact} path={route.path} render={(props)=>{
+            return <route.component {...props} routes={route.routes}/>
+          }}></Route>)}
         </Switch>
       </HashRouter>
     </div>

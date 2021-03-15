@@ -1,0 +1,42 @@
+@import '../../../../styles/common.scss';
+
+.talkTitle {
+  padding: 12px 15px;
+  background-color: #F3F3F3;
+  border-left: 3px solid #1D9B9B;
+  font-size: 16px;
+
+  span {
+    color: rgb(250, 91, 17);
+  }
+}
+
+.ant-divider-inner-text {
+  color: rgb(104, 102, 102);
+  font-size: 18px;
+}
+
+.talkMain {
+  height: 200px;
+  border: 1px solid #F3F3F3;
+  border-top: none;
+  margin-top: -28px;
+  padding: 30px 40px;
+  font-size: 15px;
+  color: rgb(104, 102, 102);
+}
+
+.mainTitle {
+  border-bottom: 1px solid #F3F3F3;
+  padding-bottom: 10px;
+}
+
+.mainContent {
+  text-align: center;
+  margin-top: 20px;
+
+  h4 {
+    color: black;
+    font-weight: 600;
+  }
+}

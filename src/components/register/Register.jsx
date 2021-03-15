@@ -9,7 +9,7 @@ export default function Register() {
   const onFinish = (val) => {
       userdata.push(val);
       message.info("恭喜你，注册成功！")
-      history.push('/user');
+      history.push('/user/talk');
     }
   return (
     <div className="rgtBox">
@@ -29,7 +29,7 @@ export default function Register() {
           </Radio.Group>
         </Form.Item>
         <Form.Item label="密码" name="rgtpsd" rules={[{ required: true, message: "请输入密码！" }]}>
-          <Input />
+          <Input.Password />
         </Form.Item>
         <Form.Item>
           <Button htmlType="submit" type="primary" className="rgtBtn">注册</Button>

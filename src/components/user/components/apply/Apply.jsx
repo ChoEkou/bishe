@@ -1,10 +1,8 @@
-import React from 'react'
+import React from 'react';
+import './Apply.scss';
 
-export default function Apply() {
-  return (
-    <div>
-      11
-      apply
-    </div>
-  )
+const Apply = () => {
+  return 11
 }
+
+export default Apply;

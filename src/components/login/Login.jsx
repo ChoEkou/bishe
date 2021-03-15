@@ -5,22 +5,11 @@ import loginImg from '../../assets/login/login.jpg';
 import loginUser from '../../assets/login/user.jpg';
 import './Login.scss';
 
-const userData = [
-  {
-    username: 'user1',
-    password: 'user1'
-  },
-  {
-    username: 'user2',
-    password: 'user2'
-  }
-];
-
 const Login = () => {
   const history = useHistory();
   const onFinish = (values) => {
     if((values.username == '2017001' && values.password == '2017001' ) || (values.username == '2017002' && values.password == '2017002' ) ) {
-      history.push('/user');
+      history.push('/user/talk');
     }else if((values.username == 'admin1' && values.password == 'admin1' ) || (values.username == 'admin2' && values.password == 'admin2' )) {
       history.push('/admin');
     }else{

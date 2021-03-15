@@ -1,16 +1,16 @@
 import React from 'react';
-import { HashRouter as Router, Route, Link } from 'react-router-dom';
+import { Link, Route, Switch } from 'react-router-dom';
 import { Layout, Menu } from 'antd';
 import { UserOutlined, LaptopOutlined, NotificationOutlined } from '@ant-design/icons';
-import Talk from './components/talk/Talk';
-import Apply from './components/apply/Apply';
-import routes from '../../route';
+import Apply from '../../../src/components/user/components/apply/Apply';
+import Talk from '../../../src/components/user/components/talk/Talk';
 import './User.scss';
 
 const { SubMenu } = Menu;
 const { Header, Content, Sider } = Layout;
 
-export default function User() {
+const User = (props) => {
+  const { routes } = props;
   return (
     <div className="userBox">
       <Layout>
@@ -30,7 +30,9 @@ export default function User() {
               style={{ height: '100%', borderRight: 0 }}
             >
               <SubMenu key="sub1" icon={<UserOutlined />} title="我的桌面">
-                <Menu.Item key="1">社团公告</Menu.Item>
+                <Menu.Item key="1">
+                  <Link to="/user/talk">社团公告</Link>
+                </Menu.Item>
               </SubMenu>
               <SubMenu key="sub2" icon={<LaptopOutlined />} title="社团申请">
                 <Menu.Item key="5">
@@ -42,7 +44,7 @@ export default function User() {
               </SubMenu>
             </Menu>
           </Sider>
-          <Layout style={{ padding: '0 24px 24px' }}>
+          <Layout style={{ padding: '0 24px 24px', backgroundColor: '#fff' }}>
             <Content
               style={{
                 padding: 24,
@@ -50,10 +52,8 @@ export default function User() {
                 minHeight: 280,
               }}
             >
-              <switch>
-                <Route path="/user/apply" component={Apply}></Route>
-                <Route path="/user/talk" component={Talk}></Route>
-              </switch>
+              <Route path="/user/talk" exact component={Talk}></Route>
+              <Route path="/user/apply" exact component={Apply}></Route>
             </Content>
           </Layout>
         </Layout>
@@ -61,3 +61,5 @@ export default function User() {
     </div>
   )
 }
+
+export default User;
