@@ -3,13 +3,16 @@ import {Link, useHistory} from 'react-router-dom';
 import { Button, Form, Input, message } from 'antd';
 import loginImg from '../../assets/login/login.jpg';
 import loginUser from '../../assets/login/user.jpg';
+import {userdata} from '../../data.js';
 import './Login.scss';
 
 const Login = () => {
   const history = useHistory();
   const onFinish = (values) => {
     if((values.username == '2017001' && values.password == '2017001' ) || (values.username == '2017002' && values.password == '2017002' ) ) {
+      userdata.push(values);
       history.push('/user/talk');
+      
     }else if((values.username == 'admin1' && values.password == 'admin1' ) || (values.username == 'admin2' && values.password == 'admin2' )) {
       history.push('/admin');
     }else{

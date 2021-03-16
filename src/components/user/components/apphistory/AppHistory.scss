@@ -1,0 +1,18 @@
+@import '../../../../styles/common.scss';
+
+.historyHeader {
+  display: flex;
+  border: 1px solid gray;
+  font-size: 17px;
+  width: 85%;
+
+  .historyBox {
+    padding: 10px 50px;
+    border-left: 1px solid gray;
+
+    &:nth-child(1) {
+      border: none;
+    }
+  }
+}
+

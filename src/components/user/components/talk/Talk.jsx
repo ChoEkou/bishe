@@ -8,7 +8,11 @@ const Talk = () => {
   return (
     <div className="talkBox">
       <div className="talkTitle">
-        欢迎同学: &nbsp;&nbsp;<span>小{userdata[userdata.length-1].rgtname}</span>
+        欢迎同学: &nbsp;&nbsp;
+        <span>
+          小 &nbsp;
+          {userdata[userdata.length-1].hasOwnProperty('rgtname') ? userdata[userdata.length-1].rgtname : userdata[userdata.length-1].username}
+        </span>
       </div>
       <Divider orientation="left">公告</Divider>
       <div className="talkMain">

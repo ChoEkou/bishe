@@ -10,6 +10,8 @@ import User from '../src/components/user/User';
 import Admin from './components/admin/Admin';
 import Apply from '../src/components/user/components/apply/Apply';
 import Talk from '../src/components/user/components/talk/Talk';
+import AppHistory from '../src/components/user/components/apphistory/AppHistory';
+
 
 const routes = [
   {
@@ -60,7 +62,12 @@ const routes = [
         path: '/apply',
         exact: true,
         component: Apply
-      }
+      },
+      {
+        path: '/apphistory',
+        exact: true,
+        component: AppHistory
+      },
     ]
   },
   {

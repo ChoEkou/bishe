@@ -1,9 +1,11 @@
 import React from 'react';
-import { Link, Route, Switch } from 'react-router-dom';
+import { Link, Route } from 'react-router-dom';
 import { Layout, Menu } from 'antd';
 import { UserOutlined, LaptopOutlined, NotificationOutlined } from '@ant-design/icons';
-import Apply from '../../../src/components/user/components/apply/Apply';
-import Talk from '../../../src/components/user/components/talk/Talk';
+import Apply from './components/apply/Apply';
+import Talk from './components/talk/Talk';
+import AppHistory from './components/apphistory/AppHistory';
+
 import './User.scss';
 
 const { SubMenu } = Menu;
@@ -38,6 +40,9 @@ const User = (props) => {
                 <Menu.Item key="5">
                   <Link to='/user/apply'>活动申请</Link>
                 </Menu.Item>
+                <Menu.Item key="7">
+                  <Link to='/user/apphistory'>申请历史</Link>
+                </Menu.Item>
               </SubMenu>
               <SubMenu key="sub3" icon={<NotificationOutlined />} title="个人设置">
                 <Menu.Item key="9">个人信息</Menu.Item>
@@ -54,6 +59,8 @@ const User = (props) => {
             >
               <Route path="/user/talk" exact component={Talk}></Route>
               <Route path="/user/apply" exact component={Apply}></Route>
+              <Route path="/user/apphistory" exact component={AppHistory}></Route>
+
             </Content>
           </Layout>
         </Layout>
