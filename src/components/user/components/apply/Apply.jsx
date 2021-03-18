@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Button, Result, Form, Input } from 'antd';
 import { SmileOutlined } from '@ant-design/icons';
 import TextArea from 'antd/lib/input/TextArea';
-import { applyList } from '../../../../data.js';
+import { applyList, result } from '../../../../data.js';
 import './Apply.scss';
 
 const Apply = () => {
@@ -13,8 +13,8 @@ const Apply = () => {
   const onFinish = (val) => {
     const aa = {...val};
     aa.shenhe = false;
-    console.log(aa);
     applyList.push(aa);
+    console.log(result)
     setIsSuccess(true);
   };
 

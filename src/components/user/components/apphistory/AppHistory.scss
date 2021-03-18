@@ -2,13 +2,15 @@
 
 .historyHeader {
   display: flex;
-  border: 1px solid gray;
   font-size: 17px;
-  width: 85%;
+  background-color: #717980;
 
   .historyBox {
-    padding: 10px 50px;
+    color: #fff;
     border-left: 1px solid gray;
+    padding: 10px 0 10px 15px;
+    flex: 1;
+    text-align: left;
 
     &:nth-child(1) {
       border: none;
@@ -16,3 +18,16 @@
   }
 }
 
+.historyMain {
+  border: 1px solid rgb(211, 210, 210);
+}
+.mainRow {
+  @include displayFlex(row, center, center);
+
+  div {
+    text-align: left;
+    flex: 1;
+    padding: 10px;
+    padding-left: 15px;
+  }
+}

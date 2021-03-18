@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Route } from 'react-router-dom';
+import { Link, Redirect, Route, Switch } from 'react-router-dom';
 import { Layout, Menu } from 'antd';
 import { UserOutlined, LaptopOutlined, NotificationOutlined } from '@ant-design/icons';
 import Apply from './components/apply/Apply';
@@ -11,8 +11,7 @@ import './User.scss';
 const { SubMenu } = Menu;
 const { Header, Content, Sider } = Layout;
 
-const User = (props) => {
-  const { routes } = props;
+const User = () => {
   return (
     <div className="userBox">
       <Layout>
@@ -57,10 +56,12 @@ const User = (props) => {
                 minHeight: 280,
               }}
             >
-              <Route path="/user/talk" exact component={Talk}></Route>
-              <Route path="/user/apply" exact component={Apply}></Route>
-              <Route path="/user/apphistory" exact component={AppHistory}></Route>
-
+              <Switch>
+                <Route path="/user/talk" exact component={Talk}></Route>
+                <Route path="/user/apply" exact component={Apply}></Route>
+                <Route path="/user/apphistory" exact component={AppHistory}></Route>
+                <Redirect to="/uesr/talk" />
+              </Switch>
             </Content>
           </Layout>
         </Layout>

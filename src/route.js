@@ -11,6 +11,7 @@ import Admin from './components/admin/Admin';
 import Apply from '../src/components/user/components/apply/Apply';
 import Talk from '../src/components/user/components/talk/Talk';
 import AppHistory from '../src/components/user/components/apphistory/AppHistory';
+import ShenPi from '../src/components/admin/components/shenpi/ShenPi';
 
 
 const routes = [
@@ -72,8 +73,14 @@ const routes = [
   },
   {
     path: '/admin',
-    exact: true,
-    component: Admin
+    component: Admin,
+    routes: [
+      {
+        path: '/shenpi',
+        exact: true,
+        component: ShenPi
+      },
+    ]
   },
   
 ];

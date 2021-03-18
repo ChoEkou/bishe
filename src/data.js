@@ -2,11 +2,14 @@
 // eslint-disable-next-line no-undef
 
 //账号
-export const userdata = [
+export let userdata = [
   {
     rgtname: 'sss',
   }
 ];
 
 //活动申请列表
-export const applyList = [];
+export let applyList = [];
+
+//审核结果
+export let result = [false];
