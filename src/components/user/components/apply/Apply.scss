@@ -2,6 +2,11 @@
 
 .applyBox {
   width: 50%;
+
+  textarea.ant-input {
+    resize: none;
+    height: 200px;
+  }
 }
 
 .subBtn {

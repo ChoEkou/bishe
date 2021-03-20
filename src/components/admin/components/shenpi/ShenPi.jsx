@@ -1,19 +1,19 @@
 
-import React, {useEffect} from 'react';
-import { Button } from 'antd';
+import React, {useState} from 'react';
+import { Button, message } from 'antd';
 import { applyList, result } from '../../../../data.js';
 
 import './ShenPi.scss';
 
 export default function ShenPi() {
+  const [isaa, setAA] = useState(false);
   const arr = ['活动名称', '活动地点', '活动简介', '审核结果'];
   const handleApp = (i) => {
     result[i] = true;
+    setAA(!isaa);
+    message.info("已审批")
   };
 
-  useEffect(() => {
-    console.log(11);
-  }, [result])
   return (
     <div>
       <div>

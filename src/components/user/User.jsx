@@ -60,7 +60,7 @@ const User = () => {
                 <Route path="/user/talk" exact component={Talk}></Route>
                 <Route path="/user/apply" exact component={Apply}></Route>
                 <Route path="/user/apphistory" exact component={AppHistory}></Route>
-                <Redirect to="/uesr/talk" />
+                <Redirect to="/user/talk" />
               </Switch>
             </Content>
           </Layout>

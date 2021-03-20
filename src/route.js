@@ -12,6 +12,8 @@ import Apply from '../src/components/user/components/apply/Apply';
 import Talk from '../src/components/user/components/talk/Talk';
 import AppHistory from '../src/components/user/components/apphistory/AppHistory';
 import ShenPi from '../src/components/admin/components/shenpi/ShenPi';
+import Gonggao from '../src/components/admin/components/gonggao/Gonggao';
+import Members from '../src/components/admin/components/members/Members';
 
 
 const routes = [
@@ -79,6 +81,16 @@ const routes = [
         path: '/shenpi',
         exact: true,
         component: ShenPi
+      },
+      {
+        path: '/gonggao',
+        exact: true,
+        component: Gonggao
+      },
+      {
+        path: '/members',
+        exact: true,
+        component: Members
       },
     ]
   },

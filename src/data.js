@@ -13,3 +13,6 @@ export let applyList = [];
 
 //审核结果
 export let result = [false];
+
+//社团公告
+export let gonggao = [{date: '无',content: '暂无公告'}];

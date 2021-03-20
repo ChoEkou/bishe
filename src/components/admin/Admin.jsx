@@ -1,8 +1,10 @@
 import React from 'react';
-import { Link, Route } from 'react-router-dom';
+import { Link, Redirect, Route, Switch } from 'react-router-dom';
 import { Layout, Menu } from 'antd';
 import { UserOutlined, LaptopOutlined, NotificationOutlined } from '@ant-design/icons';
 import ShenPi from './components/shenpi/ShenPi';
+import Gonggao from './components/gonggao/Gonggao';
+import Members from './components/members/Members';
 import './Admin.scss';
 
 const { SubMenu } = Menu;
@@ -29,7 +31,7 @@ const Admin = () => {
             >
               <SubMenu key="sub1" icon={<UserOutlined />} title="我的桌面">
                 <Menu.Item key="1">
-                  <Link to="/user/talk">社团公告</Link>
+                  <Link to="/admin/gonggao">社团公告</Link>
                 </Menu.Item>
               </SubMenu>
               <SubMenu key="sub2" icon={<LaptopOutlined />} title="社团审批">
@@ -37,8 +39,10 @@ const Admin = () => {
                   <Link to='/admin/shenpi'>待审批</Link>
                 </Menu.Item>
               </SubMenu>
-              <SubMenu key="sub3" icon={<NotificationOutlined />} title="个人设置">
-                <Menu.Item key="9">个人信息</Menu.Item>
+              <SubMenu key="sub3" icon={<NotificationOutlined />} title="成员设置">
+                <Menu.Item>
+                  <Link to="/admin/members">成员信息</Link>
+                </Menu.Item>
               </SubMenu>
             </Menu>
           </Sider>
@@ -50,7 +54,12 @@ const Admin = () => {
                 minHeight: 280,
               }}
             >
-             <Route path="/admin/shenpi" exact component={ShenPi}></Route>
+              <Switch>
+                <Route path="/admin/shenpi" exact component={ShenPi}></Route>
+                <Route path="/admin/gonggao" exact component={Gonggao}></Route>
+                <Route path="/admin/members" exact component={Members}></Route>
+                <Redirect to='/admin/gonggao' />
+              </Switch>
             </Content>
           </Layout>
         </Layout>

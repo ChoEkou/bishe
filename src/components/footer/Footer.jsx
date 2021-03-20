@@ -4,9 +4,9 @@ import './Footer.scss';
 
 const Footer = () => {
   const footerArray = [
-    ['关于我们', '关于我们', '联系我们', '人力头条'],
-    ['找工作', '关于我们', '联系我们', '人力头条'],
-    ['找人才', '关于我们', '联系我们', '人力头条'],
+    ['关于我们', '关于我们', '联系我们', '加入我们'],
+    ['社团', '社团风采', '社团成员', '社团活动'],
+    ['新闻', '关于我们', '新闻', '新闻头条'],
     ['帮助', '关于我们', '联系我们', '人力头条']
   ];
 
@@ -14,7 +14,7 @@ const Footer = () => {
     <div className="footer-box">
       <div className="footer-container">
         <div className="footer-left">
-          <img src={footerLogo} alt="" />
+          <img src={footerLogo} alt="" width="100%"/>
         </div>
         <div className="footer-right">
           {footerArray.map((item, index) => {

@@ -5,6 +5,7 @@
   background-color: #F3F3F3;
   border-left: 3px solid #1D9B9B;
   font-size: 16px;
+  color: gray;
 
   span {
     color: rgb(250, 91, 17);
@@ -16,24 +17,23 @@
   font-size: 18px;
 }
 
-.talkMainBox {
+.talkMain {
   border: 1px solid #F3F3F3;
   border-top: none;
   margin-top: -28px;
-  padding: 30px 40px 50px;
+  padding: 30px 40px;
   font-size: 15px;
   color: rgb(104, 102, 102);
-
 }
 
-.mainTitle1 {
+.mainTitle {
   padding-bottom: 10px;
 }
 
 .mainContent {
+  position: relative;
   text-align: center;
   margin-top: 20px;
-  overflow: hidden;
 
   h4 {
     color: black;
@@ -41,6 +41,17 @@
   }
 }
 
-.tongzhiMargin {
-  margin-bottom: 30px;
+.gonggaoArea {
+  width: 100%;
+  height: 200px;
+  resize: none;
+  border-color: #ddd;
+  outline: none;
+}
+
+.fabuBtn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  border-radius: 3px;
 }
