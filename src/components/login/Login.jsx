@@ -23,7 +23,7 @@ const Login = () => {
   return (
     <div>
       <div className="loginBox">
-        <Link to="/" className="toApp">返回首页 -></Link>
+        <Link to="/" className="toApp">返回首页 -&gt;</Link>
         <div className="loginContent">
           <div className="loginLeft">
             <img src={loginImg} alt="loginImg"/>

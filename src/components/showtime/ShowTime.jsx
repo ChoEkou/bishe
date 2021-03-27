@@ -16,7 +16,7 @@ export default function ShowTime() {
 
   return (
     <div className="showBox">
-      <div className="container">
+      {/* <div className="container">
         <h1>校园动态</h1>
         <div className="main">
           <div className="show-left">
@@ -30,14 +30,10 @@ export default function ShowTime() {
               </div>)
             })}
           </div>
-          {/* <div className="show-right">
-            {current == 0 && <News />}
-            {current == 1 && <Talks />}
-            {current == 2 && <Active />}
-            {current == 3 && <FengCai />}
-          </div> */}
+          
         </div>
       </div>
+     */}
     </div>
   )
 }

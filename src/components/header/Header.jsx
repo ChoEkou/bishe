@@ -1,5 +1,6 @@
 import React from 'react';
 import { useHistory, Link } from 'react-router-dom';
+import team from '../../assets/common/team.jpg';
 import './Header.scss';
 
 const Header = () => {
@@ -27,7 +28,9 @@ const Header = () => {
         <div className='headerBox'>
             <div className="container">
                 <div className="left">
-                    <Link to='/'>我的社团</Link>
+                    <Link to='/'>
+                      我的社团
+                    </Link>
                 </div>
                 <div className="center">
                     {nav.map((nav, index) => {

@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from '../header/Header';
+import xinwen from '../../assets/common/xinwen.jpg';
 import aa from '../../assets/news/1.jpg';
 import bb from '../../assets/news/2.jpg';
 import cc from '../../assets/news/3.jpg';
@@ -50,6 +51,9 @@ export default function News() {
   return (
     <div>
       <Header/>
+      <div className="newsBanner">
+        <img src={xinwen} alt="xinwen"/>
+      </div>
       <div className="newTitle">{newTitle}</div>
       <div className="dateTag">
         <div className="tag">2017-10-20</div>

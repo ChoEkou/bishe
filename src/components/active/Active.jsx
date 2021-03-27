@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from '../header/Header';
+import huodong from '../../assets/common/huodong.jpg';
 import './Active.scss';
 
 const acMain = [
@@ -29,7 +30,9 @@ export default function Active() {
   return (
     <div>
       <Header />
-      <div className="acTitle">精彩纷呈社团活动 展示优秀社团文化</div>
+      <div className="activeBanner">
+        <img src={huodong} alt="huodong"/>
+      </div>
       <div className="acInfo">
         发布时间： 2008-11-10 浏览次数： 363
       </div>
